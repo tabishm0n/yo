@@ -1,3 +1,7 @@
+:root{
+    --darkpurple:#6b488e;
+    --lightpurple: #b37beb;
+}
 .main-container{
     background-color: #f4f5f8;
     height:90vh;
@@ -7,7 +11,151 @@
 }
 .sidebar-container{
     flex:0.3;
+    display: flex;
+    flex-direction: column;
 }
-.workArea-container{
+.chatArea-container{
     flex:0.7;
+}
+.sb-header{
+    background-color: white;
+    border-radius: 20px;
+    padding:10px 5px;
+    margin:10px;
+    display:flex;
+    justify-content: space-between;
+}
+.sb-search{
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin:10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-box{
+    outline-width: 0px;
+    border: none;
+    font-size: 1.27rem;
+    margin-left: 20px;
+    color: black;
+
+}
+.sb-conversations{
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin:10px;
+    flex:1;
+    overflow: scroll;
+}
+.conversation-container{
+    display: grid;
+    grid-template-columns: 32px auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+}
+.con-icon{
+    grid-area:1/1/3/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: white;
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+}
+.con-title{
+    grid-area: 1/2/2/4;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: rgba(0,0,0,0.54);
+}
+.con-timeStamp{
+    justify-self: flex-end;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.75rem;
+    color: rgba(0,0,0,0.54);
+}
+.con-last-message{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.75rem;
+}
+.chatArea-container{
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+}
+.chatArea-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.messages-container{
+    flex: 1;
+    background-color: white;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: scroll;
+}
+.text-input-area{
+    background-color: white;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-text-content{
+    background-color: #d9d9d9;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    width: max-content;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.self-message-container{
+    display:flex;
+    justify-content: flex-end;
+}
+.message-box{
+    display: flex;
+    background-color: var(--lightpurple);
+    width: max-content;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    flex-direction: column;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.self-time-stamp{
+    align-self: flex-end;
+    font-size: 0.75rem;
+    font-weight: lighter;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
