@@ -7,7 +7,7 @@ import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOu
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { IconButton } from '@mui/material';
-
+import {useNavigate} from 'react-router-dom';
 function SideBar() {
   const [conversations, setConversations] = useState([
     {
@@ -26,6 +26,7 @@ function SideBar() {
       timeStamp: "today",
     },
   ]);
+  const navigate = useNavigate();
   return (
     <div className='sidebar-container'>
         <div className="sb-header">
@@ -35,7 +36,7 @@ function SideBar() {
             </IconButton>
           </div>
           <div>
-            <IconButton>
+            <IconButton onClick={()=>{navigate('active-users')}}>
               <PersonAddAlt1Icon/>
             </IconButton>
             <IconButton>
@@ -57,7 +58,7 @@ function SideBar() {
         </div>
         <div className="sb-conversations">
           {conversations.map((conversation) =>{
-            return <ConversationsItem props={conversation} key={conversation.name}/>;
+            return <ConversationsItem props={conversation} key={conversation.name} />;
           })}
         </div>
     </div>

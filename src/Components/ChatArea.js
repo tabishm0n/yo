@@ -1,11 +1,29 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import { IconButton } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import SendIcon from '@mui/icons-material/Send';
 import MessageOthers from './MessageOthers';
 import MessageSelf from './MessageSelf';
 
-function ChatArea({props}) {
+function ChatArea() {
+    const [conversations, setConversations] = useState([
+        {
+          name: "Test#1",
+          lastMessage: "Last Message #1",
+          timeStamp: "today",
+        },
+        {
+          name: "Saber",
+          lastMessage: "Last Message #2",
+          timeStamp: "today",
+        },
+        {
+          name: "Asad",
+          lastMessage: "Last Message #3",
+          timeStamp: "today",
+        },
+      ]);
+      var props=conversations[0];
   return (
     <div className='chatArea-container'>
         <div className='chatArea-header'>
