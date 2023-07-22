@@ -24,6 +24,7 @@
     margin:10px;
     display:flex;
     justify-content: space-between;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .sb-search{
     background-color: white;
@@ -33,6 +34,7 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .search-box{
     outline-width: 0px;
@@ -49,6 +51,7 @@
     margin:10px;
     flex:1;
     overflow: scroll;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .conversation-container{
     display: grid;
@@ -105,6 +108,7 @@
     padding: 10px 10px;
     margin: 10px;
     border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .header-text{
     display: flex;
@@ -119,6 +123,11 @@
     margin: 10px;
     border-radius: 20px;
     overflow: scroll;
+    scrollbar-width: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.messages-container::-webkit-scrollbar,.sb-conversations::-webkit-scrollbar{
+    display: none;
 }
 .text-input-area{
     background-color: white;
@@ -127,6 +136,7 @@
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .other-text-content{
@@ -159,3 +169,119 @@
     font-weight: lighter;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.welcome-logo{
+    height: 20vw;
+}
+.welcome-container{
+    display: flex;
+    flex:0.7;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0,0,0,0.54);
+    border-bottom: 7px solid var(--lightpurple);
+    border-radius: 10px;
+}
+.create-groups-container{
+    flex: 0.7;
+    align-self: center;
+    padding: 20px 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.login-container{
+    height: 90vh;
+    width: 90vw;
+    background-color: #f4f5f8;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.image-container{
+    flex:0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box{
+    flex: 0.7;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--lightpurple);
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.login-text{
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+.login-box button{
+    margin-top: 30px;
+}
+.list-container{
+    flex: 0.7;
+}
+.active-user-header{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 16px 10px;
+    margin: 10px;
+    margin-bottom: 5.7rem;
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+}
+.active-user-title{
+    color: rgba(0,0,0,0.54);
+    margin-left:10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+.active-user-logo{
+    color:var(--lightpurple);
+    margin-left : 15px;
+}
+.active-user-list{
+    flex:1;
+    overflow:scroll;
+    scrollbar-width: none;
+    padding:10px;
+}
+.active-user-list::-webkit-scrollbar{
+    display: none;
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 20px;
+    padding: 10px 5px;
+    gap:10px;
+    margin:10px;
+    transition-duration: 0.5s;
+}
+.list-item:hover{
+    background-color: rgb(226,226,226);
+
+}
+.list-item:active{
+    background-color: white;
+}
+/* .MuiInput-root {
+    border-bottom: 1px solid var(--lightpurple) !important;
+  } */
