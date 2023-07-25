@@ -9,3 +9,6 @@
   justify-content: center;
   align-items: center;
 }
+.App-dark{
+  background-color: #181e21 !important;
+}

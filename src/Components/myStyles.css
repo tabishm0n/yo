@@ -2,6 +2,45 @@
     --darkpurple:#6b488e;
     --lightpurple: #b37beb;
 }
+.dark{
+    background-color: #2d3941 !important;
+    color:#58626c !important;
+}
+.dark-background{
+    background-color: #293136 !important;
+}
+.dark-hover{
+    background-color: #2d3941 !important;
+}
+.dark-hover:hover{
+    background-color: #3a464e !important;
+}
+.dark-hover:active{
+    background-color: #2d3941 !important;
+}
+.dark2{
+    background-color: #2d3941  !important;
+}
+.dark2:hover{
+    background-color: #435057 !important;
+}
+.dark2:active{
+    background-color: #2d3941 !important; 
+}
+.dark-icon{
+    background-color: #606e7a !important;
+}
+.dark-text{
+    color: #f8fafc !important;
+}
+.dark-message{
+    
+}
+.icon{
+    width:1.3em !important;
+    height:1.3em !important;
+    
+}
 .main-container{
     background-color: #f4f5f8;
     height:90vh;
@@ -25,6 +64,9 @@
     display:flex;
     justify-content: space-between;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.sb-header-right{
+    margin-right: 10px;
 }
 .sb-search{
     background-color: white;
@@ -58,7 +100,7 @@
     grid-template-columns: 32px auto auto;
     grid-template-rows: auto auto;
     column-gap: 10px;
-    padding: 5px;
+    padding: 15px;
     margin: 5px;
     border-radius: 20px;
     transition-duration: 0.5s;

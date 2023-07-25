@@ -6,11 +6,13 @@ import SideBar from './SideBar';
 import CreateGroups from './CreateGroups';
 import ActiveUsers from './ActiveUsers';
 import { Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function MainContainer() {
-  
+  const lightTheme = useSelector((state)=>state.themeKey);
+
   return (
-    <div className="main-container">
+    <div className={"main-container"+((lightTheme) ?"" : " dark-background")}>
       <SideBar/>
       <Outlet />
       {/* <Welcome/> */}

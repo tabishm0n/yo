@@ -4,8 +4,10 @@ import DeleteIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import SendIcon from '@mui/icons-material/Send';
 import MessageOthers from './MessageOthers';
 import MessageSelf from './MessageSelf';
+import { useSelector } from 'react-redux';
 
 function ChatArea() {
+  const lightTheme = useSelector((state)=>state.themeKey);
     const [conversations, setConversations] = useState([
         {
           name: "Test#1",
@@ -36,7 +38,7 @@ function ChatArea() {
                 <DeleteIcon/>
             </IconButton>
         </div>
-        <div className='messages-container'>
+        <div className={"messages-container"+((lightTheme) ?"" : " dark")}>
             <MessageOthers/>
             <MessageSelf/>
             <MessageOthers/>
