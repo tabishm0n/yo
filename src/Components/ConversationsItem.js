@@ -10,7 +10,7 @@ function ConversationsItem({props}) {
       <p className={"con-icon"+((lightTheme) ?"" : " dark-icon")}>{props.name[0]}</p>
       <p className={"con-title"+((lightTheme) ?"" : " dark-text")}>{props.name}</p>
       <p className="con-lastMessage">{props.lastMessage}</p>
-      <p className="con-timeStamp">{props.timeStamp}</p>
+      <p className={"con-timeStamp"+((lightTheme) ?"" : " dark-text")}>{props.timeStamp}</p>
     </div>
   )
 }

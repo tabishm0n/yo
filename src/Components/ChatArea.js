@@ -28,13 +28,13 @@ function ChatArea() {
       var props=conversations[0];
   return (
     <div className='chatArea-container'>
-        <div className='chatArea-header'>
+        <div className={'chatArea-header'+((lightTheme) ?"" : " dark")}>
             <p className='con-icon'>{props.name[0]}</p>
             <div className='header-text'>
-                <p className='con-title'>{props.name}</p>
-                <p className='con-timeStamp'>{props.timeStamp}</p>
+                <p className={'con-title'+((lightTheme) ?"" : " dark-text")}>{props.name}</p>
+                <p className={'con-timeStamp'+((lightTheme) ?"" : " dark-text")}>{props.timeStamp}</p>
             </div>
-            <IconButton>
+            <IconButton className={"icon"+((lightTheme) ?"" : " dark")}>
                 <DeleteIcon/>
             </IconButton>
         </div>
@@ -54,9 +54,9 @@ function ChatArea() {
             <MessageOthers/>
             <MessageSelf/>
         </div>
-        <div className='text-input-area'>
-            <input placeholder='Type a message' className='search-box'/>
-            <IconButton>
+        <div className={'text-input-area'+((lightTheme) ?"" : " dark")}>
+            <input placeholder='Type a message' className={'search-box'+((lightTheme) ?"" : " dark")}/>
+            <IconButton className={"icon"+((lightTheme) ?"" : " dark")}>
                 <SendIcon/>
             </IconButton>
         </div>
